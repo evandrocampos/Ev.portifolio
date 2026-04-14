@@ -797,18 +797,25 @@
         .lang-btn {
             background: transparent;
             border: 2px solid transparent;
-            font-size: 1.35rem;
-            padding: 2px;
-            width: 34px;
-            height: 34px;
+            padding: 0;
+            width: 32px;
+            height: 32px;
             border-radius: 50%;
             cursor: pointer;
             transition: all 0.3s;
             display: flex;
             align-items: center;
             justify-content: center;
-            line-height: 1;
+            overflow: hidden;
             filter: grayscale(40%) brightness(0.9);
+        }
+
+        .lang-btn img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            pointer-events: none;
         }
 
         .lang-btn:hover {
@@ -951,9 +958,9 @@
                     <li class="nav-item"><a class="nav-link nav-link-custom" href="#contact" data-i18n="nav_contact">Contact</a></li>
                 </ul>
                 <div class="lang-switcher">
-                    <button class="lang-btn active" onclick="setLang('en')" data-lang="en" title="English">🇺🇸</button>
-                    <button class="lang-btn" onclick="setLang('pt')" data-lang="pt" title="Português">🇧🇷</button>
-                    <button class="lang-btn" onclick="setLang('es')" data-lang="es" title="Español">🇪🇸</button>
+                    <button class="lang-btn active" onclick="setLang('en')" data-lang="en" title="English"><img src="https://flagcdn.com/w40/us.png" alt="EN"></button>
+                    <button class="lang-btn" onclick="setLang('pt')" data-lang="pt" title="Português"><img src="https://flagcdn.com/w40/br.png" alt="PT"></button>
+                    <button class="lang-btn" onclick="setLang('es')" data-lang="es" title="Español"><img src="https://flagcdn.com/w40/es.png" alt="ES"></button>
                 </div>
             </div>
         </div>
